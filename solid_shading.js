@@ -7,7 +7,7 @@ if (!('type' in material_storage) ||material_storage['type'] == 'SOLID_SHADING_F
     material_storage['type'] = 'SOLID_SHADING_FULL';
 
     AFRAME.scenes[0].object3D.traverse(o => {
-        if (o.isMesh) {
+        if (o.isMesh && !o.isTroikaText) {
             if (!(o.uuid in material_storage)) {
                 material_storage[o.uuid] = {};
                 mat_prop = material_storage[o.uuid];
@@ -49,7 +49,7 @@ if (!('type' in material_storage) ||material_storage['type'] == 'SOLID_SHADING_F
     var emissive_color = new THREE.Color( 0x000000 );
 
     AFRAME.scenes[0].object3D.traverse(o => {
-        if (o.isMesh) {
+        if (o.isMesh && !o.isTroikaText) {
             if (o.uuid in material_storage) {
                 if(o.material.isMeshBasicMaterial) {
                     var prev_mat = o.material;

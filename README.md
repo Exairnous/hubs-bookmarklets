@@ -15,7 +15,7 @@ The bookmarklet `restore_shading.js` will return the shading to its original sta
 **_NOTE:_** _You must use `restore_shading.js` before activating a new shading bookmarklet, as trying to activate a new shading bookmarklet while utilizing another shading bookmarklet will do nothing (this is to prevent any problems)._
 
 ## Known Issues
-After switching to `solid_shading.js` you will have to click on `restore_shading.js` three times for it to successfully restore.
+None currently.
 
 ## Contributing
 Contributions are welcome.
